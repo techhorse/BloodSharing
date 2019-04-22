@@ -1,0 +1,32 @@
+<% include partials/header %>
+ <div class="container">
+     <header class="jumbotron">
+    
+             <h1 style="text-align:center;">Available Donors List</h1>
+             <h2 style="text-align:center;">Total Donors Found :<%= users.length %></h2>
+     </header>
+     
+     
+        <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% users.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">
+               <div class="card col-sm">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIBhpxjYjLzjMaiJgWV3u1H7xS-EdPEcI_0UWOAx1Sg7MO8Vp" alt="John" style="width:50%">
+  <h1><%= campground.username%></h1></h1>
+  <p class="title"><%= campground.Blood%></p>
+  <p><%= campground.City %></p>
+  <% if(campground.optradio == "Male") { %>
+  <p><%= campground.Mobile %></p>
+  <% } %> 
+ 
+ <p><button class="button1">Contact</button></p>
+</div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<% include partials/footer %>
